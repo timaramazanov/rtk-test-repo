@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { selectTodos } from '../../store/todo/selectors';
+import { selectTodos, selectRecentAction } from '../../store/todo/selectors';
 import {
   addTodo, finishTodo, activateTodo, updateTodo,
   removeTodo
@@ -7,6 +7,16 @@ import {
 import { TodoItem, TodoEditor } from './item';
 
 import './Todos.css'
+
+const RecentAction = () => {
+  const recentAction = useSelector(selectRecentAction);
+
+  if (recentAction) {
+    return <p>Последнее действие: "{recentAction}"</p>
+  }
+
+  return null;
+}
 
 export const Todos = () => {
   const todos = useSelector(selectTodos)
@@ -43,5 +53,6 @@ export const Todos = () => {
         remove={remove}
       />)}
     </ul>
+    <RecentAction/>
   </div>
 }
