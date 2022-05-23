@@ -1,0 +1,11 @@
+.TodosRoot {
+  max-width: 500px;
+}
+
+.TodosList {
+  padding-left: 15px;
+}
+
+.TodosList.Finished li {
+  text-decoration: line-through;
+}

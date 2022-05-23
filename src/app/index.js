@@ -1,9 +1,10 @@
 import './App.css';
+import { Todos } from './components/todo';
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Ты в master ветке, проверь другие ветки </h1>
+      <Todos/>
     </div>
   );
 }
