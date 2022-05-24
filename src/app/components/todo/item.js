@@ -9,8 +9,8 @@ export const TodoEditor = ({
 
   return <div>
     <input value={value} onChange={v => { setValue(v.target.value) }}/>
-    <button disabled={value.length === 0} onClick={() => { onSave(value) }}>Save</button>
-    {onCancel && <button onClick={() => { onCancel() }}>Cancel</button>}
+    <button disabled={value.length === 0} onClick={() => { onSave(value) }}>Сохранить</button>
+    {onCancel && <button onClick={() => { onCancel() }}>Отмена</button>}
   </div>
 }
 
